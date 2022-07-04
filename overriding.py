@@ -80,6 +80,10 @@ class GFG3(GFG2):
     
     
 # main function 
+#When you start working with other people's code you will run into
+# the if __name__ == '__main__' function at the end of the Python code. 
+#  this function checkS whether you run  the module (or script) directly, 
+# or if you import the module from another one
 if __name__ == '__main__': 
     
     # created the object gfg 
