@@ -1,66 +1,68 @@
-def myWrapper(func):
-    """_summary_
-
-    Args:
-        func (_type_): _description_
+"""
+Experience about Decorators in Python
+"""
+def my_wrapper(my_func2):
     """
-    def myInnderFunc():
+    we are experiencing How to use a decorator
+             in Python .
+    """
+
+    def my_innder_func():
         print("Inside wrapper")
-        func() #Helps to print Hello Decorator
-    return myInnderFunc() 
+        my_func2()  # Helps to print Hello Decorator
+    return my_innder_func()
 
 
-@myWrapper
-def myFunc():
-#  print("Hello Decorator")
-
-
-# myFunc()  NoneType' object is not callable
-# myFunc
-#=====================================================================================
-def mydecorator(fn):
-    """The mydecorator() function is the decorator function that takes a function 
-    (any function that does not take any argument) as an argument. The inner function
-    inner_function() can access the outer function's argument, so it executes some code 
-    before or after to extend the functionality before calling the argument function. 
-    The mydecorator function returns an inner function.
-
-
+@my_wrapper
+def my_func():
+    """This function is called with its decorator passed to my_wrapper
     """
-    def inner_function():        
-        fn()
-        print('How are you?')
-    return inner_function
+    print("Hello Decorator")
 
 
-@mydecorator
-def greet():
-	print('Hello! ', end='')
+my_func()  # python -m flake8 ./decoratortest.py  DONE  python -m black ./decoratortest.py
+
+# =====================================================================================
+# def mydecorator(fn):
+#     """The mydecorator() function  takes a function OR
+#     (any function that does not take any argument) as an argument. The inner function
+#     inner_function() can access the outer function's argument, so it executes some code
+#     before or after to extend the functionality before calling the argument function.
+#     The mydecorator function returns an inner function.
 
 
+#     """
 
-# greet()
+#     def inner_function():
+#         greet()
+#         print("How are you?")
+
+#     return inner_function
+
+
+# @mydecorator
+# def greet():
+#     print("Hello! ", end=" ")
+
+
+# greet()  # python -m black ./decoratortest.py
 
 # Output:Hello! How are you?
 
-#=========================================================
-def mydecorator(fn):
+# =========================================================
+# def mydecorator(fn):
+#     def inner_function():
+#         fn()
+#         print("How are you?")
 
-    def inner_function():        
-        fn()
-        print('How are you?')
-    return inner_function
+#     return inner_function
 
 
-@mydecorator
-def dosomething():
-	print('I am doing something.', end='')
+# @mydecorator
+# def dosomething():
+#     print("I am doing something.", end="")
 
 
 # dosomething()
 
-#outPut: I am doing something.How are you?
-
-
-
-
+# outPut: I am doing something.How are you?

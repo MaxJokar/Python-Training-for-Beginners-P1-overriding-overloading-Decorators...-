@@ -12,7 +12,7 @@ def product(a, b):
       
 # Second product method
 # Takes three argument and print their
-product
+# product
 def product(a, b, c):
     p = a * b*c
     print(p)
